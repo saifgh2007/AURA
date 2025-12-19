@@ -387,8 +387,6 @@ a {
     /* Default to larger visual size (120rem * 0.05 = 6rem) */
     transform: scale(1);
     opacity: 1;
-    will-change: transform, opacity;
-    /* Optimization */
 }
 
 /* Initial load animation */
@@ -398,8 +396,8 @@ a {
 
 @keyframes zoomToNormal {
     0% {
-        transform: scale(0.001);
-        /* Tiny dot */
+        transform: scale(50);
+        /* Start massive to render high-res pixels */
         opacity: 0;
     }
 

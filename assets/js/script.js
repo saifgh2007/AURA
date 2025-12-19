@@ -80,8 +80,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const heroTitle = document.getElementById('hero-title');
 
     if (heroTitle) {
-        // Set initial tiny state before animation
-        heroTitle.style.transform = 'scale(0.001)';
+        // Initialize at MASSIVE scale (Big -> Small animation)
+        // This ensures the browser rasterizes the image at high resolution
+        heroTitle.style.transform = 'scale(50)';
         heroTitle.style.opacity = '0';
 
         // Start the animation after a brief delay
